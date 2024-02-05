@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>transitionend Event Example</title>
+<style>
+    #box {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        transition: width 2s, height 2s, background-color 2s; /* CSS transition */
+    }
+</style>
+</head>
+<body>
+
+<div id="box"></div>
+
+<script>
+    var box = document.getElementById('box');
+
+    // Add event listener for transitionend
+    box.addEventListener('transitionend', function(event) {
+        // Code inside this function will run when the transition is completed
+        box.textContent = 'Transition completed!';
+        box.style.backgroundColor = 'lightgreen';
+    });
+
+    // Function to start the transition
+    function startTransition() {
+        box.style.width = '200px';
+        box.style.height = '200px';
+        box.style.backgroundColor = 'lightpink';
+    }
+
+    // Call the function to start the transition after a delay
+    setTimeout(startTransition, 1000);
+</script>
+
+</body>
+</html>

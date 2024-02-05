@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Tutorial</title>
+</head>
+
+<body>
+    <div>Working with JSON</div>
+    <script>
+        let jsonObj = {
+            name: "Clement",
+            friend: "Brice",
+            age: 29
+        }
+        console.log(jsonObj)
+
+        let myJsonObj = JSON.stringify(jsonObj)
+        console.log(myJsonObj)
+
+        let newJsonObj = JSON.parse(myJsonObj)
+        console.log(newJsonObj)
+    </script>
+</body>
+
+</html>

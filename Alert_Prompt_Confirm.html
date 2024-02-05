@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Tutorial</title>
+</head>
+
+<body>
+    <div>
+        Alerts, Prompts and Confirm
+    </div>
+    <script>
+        let name = alert("This is a message")
+        console.log(name)
+
+        let name2 = prompt("What is your name", "")
+        console.log(name2)
+
+        let name3 = prompt("What is your name", "Guest")
+        console.log(name3)
+
+        let name4 = confirm("Are you sure ?")
+        console.log(name4)
+
+        if (name4) {
+            console.log("You are sure.")
+        }
+        else {
+            console.log("You are not")
+        }
+    </script>
+</body>
+
+</html>

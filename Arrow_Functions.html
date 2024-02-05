@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial</title>
+</head>
+
+<body>
+    <div>
+        Arrow Functions
+    </div>
+    <script>
+
+        // arrow function
+        greet = () => {
+            console.log("Hello Good Morning")
+        }
+        greet()
+
+        // in settimeout
+        setTimeout(() => {
+            console.log("I am Settimeout")
+        }, 2000)
+
+        // arguments
+        let sum = (a, b) => {
+            return a + b
+        }
+        console.log(sum(9, 3))
+
+        // short arrow
+        let add = (a, b) => a + b
+        console.log(add(3, 4))
+
+        let half = a => a / 2
+        console.log(half(7))
+
+        // inside object
+        let obj = {
+            greetings: "Good Morning",
+            names: ["CLement", "Brice", "Mithun"],
+            show() {
+                this.names.forEach((stud) => {
+                    console.log(this.greetings + " hello " + stud)
+                })
+
+                // without arrow function cant refer outside
+                this.names.forEach(function chalo(stud) {
+                    console.log(this.greetings + " hello " + stud)
+                })
+
+            }
+        }
+        obj.show()
+    </script>
+</body>
+
+</html>

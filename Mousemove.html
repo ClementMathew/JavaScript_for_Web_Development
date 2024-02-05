@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Move Event Example</title>
+    <style>
+        #container {
+            width: 400px;
+            height: 300px;
+            background-color: lightblue;
+            position: relative;
+        }
+
+        #target {
+            width: 50px;
+            height: 50px;
+            background-color: lightgreen;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="target"></div>
+    </div>
+
+    <script>
+        var container = document.getElementById('container');
+        var target = document.getElementById('target');
+
+        // Mouse move event
+        container.addEventListener('mousemove', function (event) {
+
+            // Calculate the position of the target relative to the container
+            var containerRect = container.getBoundingClientRect();
+            var mouseX = event.clientX - containerRect.left;
+            var mouseY = event.clientY - containerRect.top;
+
+            // Set the position of the target to follow the mouse cursor
+            target.style.left = mouseX + 'px';
+            target.style.top = mouseY + 'px';
+        });
+    </script>
+
+</body>
+
+</html>

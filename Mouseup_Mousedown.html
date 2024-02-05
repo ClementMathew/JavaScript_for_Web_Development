@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Up and Mouse Down Events Example</title>
+    <style>
+        #target {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="target">Click and hold here</div>
+
+    <script>
+        var target = document.getElementById('target');
+
+        // Mouse down event
+        target.addEventListener('mousedown', function (event) {
+            target.style.backgroundColor = 'lightgreen'; // Change background color on mouse down
+            target.textContent = 'Mouse Down'; // Change text content on mouse down
+        });
+
+        // Mouse up event
+        target.addEventListener('mouseup', function (event) {
+            target.style.backgroundColor = 'lightblue'; // Restore background color on mouse up
+            target.textContent = 'Mouse Up'; // Change text content on mouse up
+        });
+    </script>
+
+</body>
+
+</html>

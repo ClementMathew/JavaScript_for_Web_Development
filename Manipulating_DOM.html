@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating DOM</title>
+</head>
+
+<body>
+    <div id="main" class="container">
+        <ul id="sub">
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </div>
+    <div class="container">
+        Second Container
+    </div>
+    <script>
+
+        // get HTML by id
+        let main = document.getElementById('main')
+        console.log(main)
+
+        // change HTML by id
+        let sub = document.getElementById('sub')
+        sub.innerHTML = "<li>My Home</li><li>About Me</li>"
+
+        // get HTML by class
+        let cont = document.getElementsByClassName('container')
+        console.log(cont)
+        console.log(cont[0])
+
+        // get HTML by Selector
+        let sub2 = document.querySelector('#sub>li')
+        console.log(sub2)
+
+        // get all HTML by Selector
+        let all = document.querySelectorAll('#sub>li')
+        console.log(all)
+
+    </script>
+</body>
+
+</html>

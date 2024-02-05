@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javasript Tutorial</title>
+</head>
+
+<body>
+    <div>
+        Scope and Conditionals
+    </div>
+    <!-- div>ul>li{Item-$}*7-->
+    <div>
+        <ul>
+            <li>Item-1</li>
+            <li>Item-2</li>
+            <li>Item-3</li>
+            <li>Item-4</li>
+            <li>Item-5</li>
+            <li>Item-6</li>
+            <li>Item-7</li>
+        </ul>
+    </div>
+    <script>
+
+        // Scope
+        var str = "This is a string"
+        var str = "This is a string 2"
+        console.log(str)
+
+        let str1 = "This is let string"
+        // let str1 = "This is let string 2" not possible
+        {
+            let str1 = "This is let string 2"
+            console.log(str1)
+        }
+        console.log(str1)
+
+        const str2 = "I want to change"
+        // str2 = "This is change" not possible
+
+        // Conditionals
+
+        // if else
+        let age = 34
+        if (age > 18) {
+            console.log("You can drink")
+        }
+        else if (age == 2) {
+            console.log("You cant drink")
+        }
+        else {
+            console.log("You cant drink")
+        }
+
+        // switch case
+        const cup = 45
+
+        switch (cup) {
+            case 41:
+                console.log("This cup is 41")
+                break;
+
+            case 42:
+                console.log("This cup is 42")
+                break;
+
+            case 43:
+                console.log("This cup is 43")
+                break;
+
+            case 44:
+                console.log("This cup is 44")
+                break;
+
+            default:
+                console.log("None")
+                break;
+        }
+    </script>
+</body>
+
+</html>

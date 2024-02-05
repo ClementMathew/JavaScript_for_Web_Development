@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Tutorial</title>
+</head>
+
+<body>
+    <div>
+        Functions
+    </div>
+    <script>
+        name1 = "Clement"
+        name2 = "Brice"
+        name3 = "Fahad"
+        greetText = "Good Morning"
+
+        function greet(name, greetText = "Hi There") {
+            console.log(greetText + " " + name)
+            console.log(name + " is a good boy")
+        }
+
+        greet(name1, greetText)
+        greet(name2, greetText)
+        greet(name3)
+
+        // return
+        function sum(a, b) {
+            c = a + b
+            return c
+        }
+
+        let returnVal = sum(1, 2)
+        console.log(returnVal)
+    </script>
+</body>
+
+</html>

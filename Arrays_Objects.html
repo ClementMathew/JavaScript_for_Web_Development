@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javasript Tutorial</title>
+</head>
+
+<body>
+    <div>
+        Arrays and Objects
+    </div>
+    <script>
+
+        //Object
+        let employee = {
+            name: "Clement",
+            salary: 20000,
+            age: 22,
+            place: "Pathanamthitta",
+            'place 2': "Kollam"
+        }
+        console.log(employee)
+
+        // accessing elemets
+        console.log(employee.salary)
+        console.log(employee['name'])
+        console.log(employee['place 2'])
+
+        // Array
+        let content = [1, 2, "CLement", undefined, null]
+        console.log(content)
+        console.log(content[2])
+
+        // array object
+        let content1 = new Array(2, 1, "Array Object", undefined, null)
+        console.log(content1)
+
+        // array length
+        console.log(content.length)
+
+        // array sort
+        content2 = content1.sort();
+        console.log(content2)
+
+        // push
+        content2.push("This is push")
+        console.log(content2)
+
+        // n empty elements in array
+        let array = new Array(23);
+        console.log(array[10])
+    </script>
+</body>
+
+</html>

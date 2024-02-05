@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Event Example</title>
+</head>
+
+<body>
+
+    <input type="text" id="myInput" placeholder="Type something here">
+
+    <script>
+        var inputField = document.getElementById('myInput');
+
+        // Focus event
+        inputField.addEventListener('focus', function (event) {
+            inputField.style.backgroundColor = 'lightyellow'; // Change background color when focused
+            inputField.placeholder = 'Focused!'; // Change placeholder text when focused
+        });
+
+        // Blur event (opposite of focus)
+        inputField.addEventListener('blur', function (event) {
+            inputField.style.backgroundColor = ''; // Restore background color when blurred
+            inputField.placeholder = 'Type something here'; // Restore placeholder text when blurred
+        });
+    </script>
+
+</body>
+
+</html>

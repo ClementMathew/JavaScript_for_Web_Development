@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Tutorial</title>
+</head>
+
+<body>
+    <div class="container">
+        Strings
+    </div>
+    <div id="content"></div>
+    <script>
+        var string = 'Cleme"nt';
+        var string2 = "Cleme'nt";
+
+        console.log(string);
+        console.log(string2);
+
+        /// Concatination
+
+        var names = "Harry";
+        var message = "is a good boy";
+
+        console.log(names + " " + message);
+
+        // BackTick
+
+        var channel = "CodeWithHarry";
+        var temp = `${names} is a nice person "and" he has a channel called ${channel}`;
+
+        console.log(temp);
+
+        // Length
+
+        var len = channel.length;
+        console.log(`Length of Channel is ${len}`);
+
+        // Escape Sequences 
+
+        console.log("Clement \n Mathew")
+        console.log("Clement \t Mathew")
+        console.log("Clement \\n Mathew")
+
+        // Using Constructor
+
+        var y = new String("This");
+        console.log(y);
+
+        document.getElementById('content').innerHTML = '<h3>this is heading</h3>'
+    </script>
+</body>
+
+</html>

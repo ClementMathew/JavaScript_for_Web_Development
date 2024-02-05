@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context Menu Example</title>
+    <style>
+        #context-menu {
+            display: none;
+            position: absolute;
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 5px;
+            width: 120px;
+        }
+
+        #target {
+            width: 200px;
+            height: 100px;
+            background: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="target">
+        Right-click me!
+    </div>
+
+    <div id="context-menu">
+        <ul>
+            <li>Action 1</li>
+            <li>Action 2</li>
+            <li>Action 3</li>
+        </ul>
+    </div>
+
+    <script>
+        // Get the target element and the context menu
+        var target = document.getElementById('target');
+        var contextMenu = document.getElementById('context-menu');
+
+        // Add event listener for contextmenu event
+        target.addEventListener('contextmenu', function (e) {
+            e.preventDefault(); // Prevent default context menu
+            contextMenu.style.display = 'block'; // Show custom context menu
+            contextMenu.style.left = e.pageX + 'px'; // Position menu horizontally
+            contextMenu.style.top = e.pageY + 'px'; // Position menu vertically
+        });
+
+        // Hide context menu when clicking outside of it
+        document.addEventListener('click', function (e) {
+            if (!contextMenu.contains(e.target)) {
+                contextMenu.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+
+</html>

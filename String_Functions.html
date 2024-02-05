@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Tutorial</title>
+</head>
+
+<body>
+    <div>
+        String Functions
+    </div>
+    <script>
+        var str = "This is a String"
+        console.log(str)
+
+        // first occurence of substring
+        var position = str.indexOf('is')
+        console.log(position)
+
+        // second occurence of substring
+        position = str.lastIndexOf('is')
+        console.log(position)
+
+        // substring from a string
+        var substr = str.slice(1, 6)
+        console.log(substr)
+
+        //negative is not possible
+        substr = str.substring(1, 7)
+        console.log(substr)
+
+        //second parameter is length
+        substr1 = str.substr(1, 2)
+        console.log(substr1)
+
+        // replace string
+        str = str.replace('String', 'Clement')
+        console.log(str)
+
+        // case change
+        console.log(str.toUpperCase())
+        console.log(str.toLowerCase())
+
+        // concatination
+        str = str.concat(' Mathew')
+        console.log(str)
+
+        // trim whitespace
+        var strwithwhitespaces = "      CLement Mathew   "
+        console.log(strwithwhitespaces.trim())
+
+        // character position
+        console.log(str.charAt(2))
+
+        // ascii code
+        console.log(str.charCodeAt(2))
+
+        console.log(str[2])
+
+    </script>
+</body>
+
+</html>

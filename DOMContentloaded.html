@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOMContentLoaded Event Example</title>
+</head>
+<body>
+
+<p id="demo">This paragraph will be changed after the DOM is loaded.</p>
+
+<script>
+    // Add event listener for DOMContentLoaded
+    document.addEventListener('DOMContentLoaded', function(event) {
+        // Code inside this function will run when the DOM is fully loaded
+        var paragraph = document.getElementById('demo');
+        paragraph.textContent = 'DOM is fully loaded. You can now manipulate it!';
+    });
+</script>
+
+</body>
+</html>
